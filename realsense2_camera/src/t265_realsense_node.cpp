@@ -1,4 +1,5 @@
 #include "../include/t265_realsense_node.h"
+#include <iostream>
 
 using namespace realsense2_camera;
 
@@ -104,6 +105,7 @@ void T265RealsenseNode::calcAndPublishStaticTransform(const stream_index_pair& s
     try
     {
         ex = getAProfile(stream).get_extrinsics_to(base_profile);
+            std::cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" << std::endl;
     }
     catch (std::exception& e)
     {
@@ -111,6 +113,7 @@ void T265RealsenseNode::calcAndPublishStaticTransform(const stream_index_pair& s
         {
             ROS_WARN_STREAM(e.what() << " : using unity as default.");
             ex = rs2_extrinsics({{1, 0, 0, 0, 1, 0, 0, 0, 1}, {0,0,0}});
+            std::cout << "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ" << std::endl;
         }
         else
         {
