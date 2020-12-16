@@ -1,3 +1,5 @@
+# EDITED by JeongAmSeo
+
 #include "../include/base_realsense_node.h"
 #include "assert.h"
 #include <boost/algorithm/string.hpp>
