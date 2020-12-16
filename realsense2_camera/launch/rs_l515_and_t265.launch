@@ -1,3 +1,5 @@
+<!-- Authors: JeongAmSeo -->
+
 <launch>
   <arg name="device_type_camera1"    		default="t265"/>
   <arg name="device_type_camera2"    		default="l515"/>		<!-- Note: using regular expression. match D435, D435i, D415... -->
